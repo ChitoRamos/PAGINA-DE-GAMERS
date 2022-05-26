@@ -1,563 +1,120 @@
-
-
-
 <template>
-
-
-<body>
-<div id="app" >
-  <v-app id="inspire">
-
-
-    <h2 align="center"> 
-      CATALOGO DE ACCESORIOS GAMER
-    </h2>
-
-
-  <v-container
-    class="fill-height"
-    fluid
-    style="min-height: 434px"
-    
-    
-  >
-    
-
-  
-    <v-fade-transition mode="out-in">
-      <v-row>
-
-
-              <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  
-
-    <v-carousel cycle
-      height="400"
-      style=width:700px;
-      hide-delimiter-background
-      show-arrows-on-hover>
-
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item.src"
-
+  <div id="app">
+    <v-toolbar-title class="text-h4" align="center">ACCESORIOS</v-toolbar-title>
+    <div class="text-center">
+      <v-btn
+        class="ma-2"
+        :loading="loading"
+        :disabled="loading"
+        color="red"
+        @click="loader = 'loading'"
+        to="/Accesorio_mouse"
       >
-        
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            
-          </v-row>
-      </v-carousel-item>
-    </v-carousel>
-                    
-                  <v-card-title class="justify-center" >
-                    Tira led 10 metros
-                    
-                    <v-banner
-                      class="black--text"
-                    >
-                        Tiras Led 5050 Kit 10m Luz Musical Rab Controlada Por App
+        <h3>Mouse Gamer</h3>
+      </v-btn>
 
+      <v-btn
+        class="ma-2"
+        :loading="loading"
+        :disabled="loading"
+        color="yellow darken-3"
+        @click="loader = 'loading'"
+        to="Accesorio_teclado"
+      >
+        <h3>Teclados Gamer</h3>
+      </v-btn>
 
+      <v-btn
+        class="ma-2"
+        :loading="loading"
+        :disabled="loading"
+        color="green"
+        @click="loader = 'loading'"
+        to="Accesorio_tira"
+      >
+        <h3>Tira Led</h3>
+      </v-btn>
 
-                    </v-banner>
-
-
-
-
-<v-dialog
-      v-model="dialog"
-      width="500"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          color="red lighten-2"
-          dark
-          v-bind="attrs"
-          v-on="on"
-        >
-          ESPECIFICACIONES
-        </v-btn>
-      </template>
-
-      <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
-          TIRA LED
-        </v-card-title>
-
-        <v-card-text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            color="primary"
-            text
-            @click="dialog = false"
-          >
-            OK
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-
-
-                    
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-              
-
-
-
-
-
-
-
-              <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/fifa2022.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    FIFA 22
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-
-
-              <v-col cols="6">
-                <v-card
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/fortnite.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center" >
-                    FORTNITE
-                  
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-
-
-
-              <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/mortal.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    MORTAL COMBAT
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/Minecraft.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    MINECRAFT
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/Fora.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    FORZA 5
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#BBDEFB"
-                >
-                  <v-img
-                    src="../assets/juegos/haloi.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    HALO INFINITE
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/halos.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    TODA LA SAGA DE HALO
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/black4.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    BLACK 4 BLOOD
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/batlefieldv.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    BATTLEFIELD V
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/gta.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    GTA
-                  </v-card-title>
-                
-                </v-card>
-              </v-col>
-
-
-               <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/gta_san_andreas.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    GTA SAN ANDREAS
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/gears3.webp"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    GEARS 3
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/gears4.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    GEARS OF WAR 4
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/gears5.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    GEARS OF WAR 5
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/blackops3.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    CALL OF DUTY BLACK OPS 3
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                <v-card
-                
-                color="#0D47A1"
-                >
-                  <v-img
-                    src="../assets/juegos/f12021.jpeg"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    FORMULA 1 
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                 <v-col cols="6">
-                  <v-card
-                
-                  color="#0D47A1"
-                  >
-                  <v-img
-                    src="../assets/juegos/halo5.webp"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    HALO 5 
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-
-
-                <v-col cols="6">
-                  <v-card
-                
-                  color="#0D47A1"
-                  >
-                  <v-img
-                    src="../assets/juegos/titanfall.webp"
-                    class="grey darken-4"
-                    contain
-                    height="241"
-                  ></v-img>
-                  <v-card-title class="justify-center">
-                    TITANFALL 2 
-                  </v-card-title>
-                
-                </v-card>
-                </v-col>
-      </v-row>
-    </v-fade-transition>
-  </v-container>
-    </v-app>
-
+      <v-btn
+        class="ma-2"
+        :loading="loading"
+        :disabled="loading"
+        color="light-blue darken-4"
+        @click="loader = 'loading'"
+        to="Accesorio_audifono"
+      >
+        <h3>Audifonos Gamer</h3>
+      </v-btn>
+      <v-btn
+        class="ma-2"
+        :loading="loading"
+        :disabled="loading"
+        color="deep-purple accent-2"
+        @click="loader = 'loading'"
+        to="Accesorio_cable"
+      >
+        <h3>Cables de internet</h3>
+      </v-btn>
+    </div>
   </div>
-  </body>
-
 </template>
 
-<script>
- export default {
-    name: 'HelloWorld',
-
-data () {
-    return {
-      items: [
-        {
-          src: require('../assets/Gamers11.jpg'),
-        },
-        {
-          src: require('../assets/control4.jpeg'),
-        },
-        {
-          src: require('../assets/control3.jpeg'),
-        },
-       
-      ],
-    }
-  },
-
-  data () {
-    return {
-      dialog: false,
-    }
-  },
- }
- 
-
-</script>
-
-
 <style>
+.v-app-bar {
+  background-color: #616161;
+}
+
+.v-toolbar-title {
+  font-size: 40px;
+  color: white;
+}
+
 ul {
   list-style-type: square;
 }
 .v-card__title {
-  font-family: Monaco;
-  font-size: 40px;
-  
+  font-family: Arial;
+  font-size: 20px;
+
   color: black;
 }
 .v-card__text {
-  color: white!important;
+  color: white !important;
 }
 
 .v-card {
-  
+  width: 800px;
 }
 
 .v-banner {
-  color: "red";
-  font-family: Monaco;
+  color: "black";
+  font-family: Arial;
   font-size: 15px;
-  background-color: "black";
 }
 
-
+/*aqui modifico la barra de titulo de catalogo de accesorios*/
 #app {
-
   /*
   border-radius: 4px;
   padding: 20px;
   transition: all 0.2s;*/
-  background-color: #616161;
+  background-color: #eb3d3d;
 }
 
-#inspire{
-    background-color: #616161;
+/*
+#inspire {
+  background-color: #000707;
 }
 
-h2{
+*/
+
+h2 {
   color: white;
   font-size: 30px;
-
 }
 
-
+pre {
+  width: 100%;
+  border: solid;
+}
 </style>

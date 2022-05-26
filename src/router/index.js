@@ -34,7 +34,47 @@ const routes = [{
         component: function() {
             return import ('../views/Catalogo_accesorios.vue')
         }
+    },
+
+    {
+        path: '/Accesorio_audifono',
+        name: 'audifono',
+        component: function() {
+            return import ('../views/Accesorio_audifono.vue')
+        }
+    },
+
+    {
+        path: '/Accesorio_tira',
+        name: 'tira',
+        component: function() {
+            return import ('../views/Accesorio_tira.vue')
+        }
+    },
+
+    {
+        path: '/Accesorio_mouse',
+        name: 'mouse',
+        component: function() {
+            return import ('../views/Accesorio_mouse.vue')
+        }
+    },
+    {
+        path: '/Accesorio_teclado',
+        name: 'teclado',
+        component: function() {
+            return import ('../views/Accesorio_teclado.vue')
+        }
+    },
+    {
+        path: '/Accesorio_cable',
+        name: 'cable',
+        component: function() {
+            return import ('../views/Accesorio_cable.vue')
+        }
     }
+
+
 
 ]
 

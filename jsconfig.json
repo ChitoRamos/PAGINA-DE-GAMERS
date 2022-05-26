@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "preserve", /*Este lo añadi yo.*/
     "target": "es5",
     "module": "esnext",
     "baseUrl": "./",
